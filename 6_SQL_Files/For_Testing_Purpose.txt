@@ -1,0 +1,26 @@
+SELECT TOP (1000) [CustomerID]
+      ,[NameStyle]
+      ,[Title]
+      ,[FirstName]
+      ,[MiddleName]
+      ,[LastName]
+      ,[Suffix]
+      ,[CompanyName]
+      ,[SalesPerson]
+      ,[EmailAddress]
+      ,[Phone]
+      ,[PasswordHash]
+      ,[PasswordSalt]
+      ,[rowguid]
+      ,[ModifiedDate]
+  FROM [AdventureWorksLT2017].[SalesLT].[Customer]
+
+
+SET IDENTITY_INSERT SalesLT.Customer ON
+
+
+INSERT INTO SalesLT.Customer (CustomerID,NameStyle,Title,FirstName,MiddleName,LastName,Suffix,CompanyName,SalesPerson,EmailAddress,Phone,PasswordHash,PasswordSalt) 
+values ('30119', '0', 'Mr.','Ak','N.','Sh','.','Just do it','adventure-works\jillian007','aksh@adventure-works.com','695-555-0258','U1/CrPqSzwLTtwgBehfpIl7f1LHSFpZw1qnG1sMzFjo=','QhHP+y8=')
+
+
+COMMIT
